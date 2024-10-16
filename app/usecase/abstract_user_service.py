@@ -9,3 +9,7 @@ class AbstractUserService(ABC):
     @abstractmethod
     def create_user(self, data: dict):
         pass
+
+    @abstractmethod
+    def create_user_order(self, user: dict, order: dict):
+        pass

@@ -14,3 +14,8 @@ class UserController:
         data = request.get_json()
         new_user = self.user_service.create_user(data)
         return jsonify(new_user.json()), 201
+
+    def create_user_order (self):
+        data = request.get_json()
+        resp = self.user_service.create_user_order(data)
+        return jsonify(resp.json()), 201
